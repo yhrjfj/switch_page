@@ -1,27 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:test/page3.dart';
+import 'package:test_app/page3.dart';
 
 class Page2 extends StatelessWidget {
   const Page2({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Second Page'),
+        title: const Text('Page 2'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Show info
-            const Text(
-              'Page 2',
-            ),
-            // Give padding
+            const Text('Page 2'),
             const SizedBox(
-              height: 20,
+              height: 25,
             ),
-            // Button for navigation
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -32,23 +28,20 @@ class Page2 extends StatelessWidget {
                   child: const Text('Back'),
                 ),
                 const SizedBox(
-                  width: 10,
+                  width: 20,
                 ),
                 ElevatedButton(
                   onPressed: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => Page3(),
+                        builder: (context) => const Page3(),
                       ),
                     );
                   },
-                  child: const Text('Page 3'),
+                  child: const Text('Next Page'),
                 ),
               ],
-            ),
-            const SizedBox(
-              height: 20,
             ),
           ],
         ),

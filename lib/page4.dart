@@ -1,20 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:test_app/page4.dart';
+import 'package:test_app/page1.dart';
 
-class Page3 extends StatelessWidget {
-  const Page3({super.key});
+class Page4 extends StatelessWidget {
+  const Page4({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Page 3'),
+        title: const Text('Page 4'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text('Page 3'),
+            const Text(
+              'Page 4',
+              style: TextStyle(
+                backgroundColor: Colors.yellowAccent,
+                fontSize: 26,
+                color: Colors.indigo,
+              ),
+            ),
             const SizedBox(
               height: 25,
             ),
@@ -25,29 +32,21 @@ class Page3 extends StatelessWidget {
                   onPressed: () {
                     Navigator.pop(context);
                   },
-                  style: TextButton.styleFrom(
-                    backgroundColor: const Color.fromRGBO(208, 240, 148, 1),
-                    foregroundColor: const Color.fromRGBO(255, 0, 0, 1),
-                  ),
                   child: const Text('Back'),
                 ),
                 const SizedBox(
                   width: 20,
                 ),
-                OutlinedButton(
+                ElevatedButton(
                   onPressed: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const Page4(),
+                        builder: (context) => const Page1(),
                       ),
                     );
                   },
-                  style: OutlinedButton.styleFrom(
-                    backgroundColor: const Color.fromARGB(71, 0, 0, 0),
-                    foregroundColor: Colors.white,
-                  ),
-                  child: const Text('Next Page'),
+                  child: const Text('First Page'),
                 ),
               ],
             ),
